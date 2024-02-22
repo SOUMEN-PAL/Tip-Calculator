@@ -47,7 +47,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Icon as Icon
-
+// TODO: Convert it to MVVM //
 @Composable
 fun JetTipUI(){
     val totalPerPerson = remember {
@@ -183,6 +183,7 @@ fun JetTipUI(){
                             val totalTip = (totalAmount.value.toDouble()) * (tipPercent.floatValue.toDouble())
                             val totalMoney = totalTip+totalAmount.value.toDouble()
                             totalPerPerson.doubleValue = totalMoney/splitNumber.intValue
+                            tip.floatValue = totalTip.toFloat()
                         }
                         else{
                             Toast.makeText(context , "Enter the Amount First" , Toast.LENGTH_LONG).show()
