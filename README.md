@@ -16,8 +16,7 @@ You can view a demo of the application in action by watching the following video
 
 ## Screenshots
 
-![Screenshot_20240222_234346](https://github.com/SOUMEN-PAL/Tip-Calculator/assets/112452467/f3d2b403-61be-4e88-a985-d972f9b0c9b1)
-![Screenshot_20240222_234446](https://github.com/SOUMEN-PAL/Tip-Calculator/assets/112452467/2144d9f4-d4e6-4bb2-933a-07c0539e30dd)
+![Screenshot_20240222_234346](https://github.com/SOUMEN-PAL/Tip-Calculator/assets/112452467/f3d2b403-61be-4e88-a985-d972f9b0c9b1) ![Screenshot_20240222_234446](https://github.com/SOUMEN-PAL/Tip-Calculator/assets/112452467/2144d9f4-d4e6-4bb2-933a-07c0539e30dd)
 
 
 
