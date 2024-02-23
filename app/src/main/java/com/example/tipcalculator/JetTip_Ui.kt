@@ -49,19 +49,11 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Icon as Icon
 // TODO: Convert it to MVVM //
 @Composable
-fun JetTipUI(){
-    val totalPerPerson = remember {
-        mutableDoubleStateOf(0.0)
-    }
-    val totalAmount = remember {
-        mutableStateOf("")
-    }
-    val splitNumber = remember {
-        mutableIntStateOf(1)
-    }
-    val tip = remember{
-        mutableFloatStateOf(0.0f)
-    }
+fun JetTipUI(viewModel: jetTIpViewModel){
+    val totalPerPerson = viewModel.totalPerPerson
+    val totalAmount = viewModel.totalAmount
+    val splitNumber = viewModel.splitNumber
+    val tip = viewModel.tip
     // A surface helps in automatically change the theme rather than box //
     Column(modifier = Modifier.padding(12.dp)){
 
@@ -168,9 +160,8 @@ fun JetTipUI(){
 
                 // just the needed value //
 
-                val tipPercent = remember {
-                    mutableFloatStateOf(0.0f)
-                }
+                val tipPercent = viewModel.tipPercent
+
                 Text(text = String.format("%.2f", tipPercent.floatValue * 100) + " %")
                 val context = LocalContext.current
                 Slider(value = tipPercent.floatValue, onValueChange ={
@@ -203,7 +194,7 @@ fun JetTipUI(){
 @Preview
 @Composable
 fun JetTipUIPreview(){
-    JetTipUI()
+    JetTipUI(viewModel = jetTIpViewModel())
 }
 
 
