@@ -55,5 +55,22 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 - Thank you to the Jetpack Compose and Kotlin communities for their valuable resources and support.
 
+## MVVM Implementation
 
+This application follows the MVVM (Model-View-ViewModel) architecture pattern. Here's how it's implemented:
 
+### Model
+
+The `JetTipModel` class represents the data and business logic of the application. It contains properties such as total per person, total amount, split number, tip, and tip percentage.
+
+### Repository
+
+The `JetTipRepository` class manages the data operations. It initializes the `JetTipModel` and provides methods to access and modify its data.
+
+### ViewModel
+
+The `JetTipViewModel` class serves as a bridge between the UI (View) and the data (Model). It holds the UI-related data and provides methods for the View to interact with the data. It communicates with the `JetTipRepository` to fetch and update data.
+
+The ViewModel exposes mutable state variables for total per person, total amount, split number, tip, and tip percentage. These variables are observed by the View (UI) components to reflect changes in the data.
+
+By separating concerns and adhering to the MVVM architecture, the application becomes more modular, testable, and maintainable.
