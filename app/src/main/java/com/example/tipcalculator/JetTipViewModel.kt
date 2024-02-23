@@ -10,12 +10,15 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
-class jetTIpViewModel(): ViewModel() {
-    private val _totalPerPerson = mutableDoubleStateOf(0.0)
-    private val _totalAmount = mutableStateOf("")
-    private val _splitNumber = mutableIntStateOf(1)
-    private val _tip = mutableFloatStateOf(0.0f)
-    private val _tipPercent = mutableFloatStateOf(0.0f)
+class JetTipViewModel(): ViewModel() {
+    private val _repository : JetTipRepository = JetTipRepository()
+    private val _initialisedData = _repository.initData()
+
+    private val _totalPerPerson = mutableDoubleStateOf(_initialisedData.totalPerPerson)
+    private val _totalAmount = mutableStateOf(_initialisedData.totalAmount)
+    private val _splitNumber = mutableIntStateOf(_initialisedData.splitNumber)
+    private val _tip = mutableFloatStateOf(_initialisedData.tip)
+    private val _tipPercent = mutableFloatStateOf(_initialisedData.tipPercent)
 
 
     // exposing the variables //

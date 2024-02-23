@@ -1,6 +1,5 @@
 package com.example.tipcalculator
 
-import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -10,31 +9,21 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.rounded.AddCircle
 import androidx.compose.material.icons.rounded.AttachMoney
-import androidx.compose.material.icons.rounded.PlusOne
 import androidx.compose.material.icons.rounded.RemoveCircle
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.RangeSlider
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableDoubleStateOf
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -47,16 +36,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Icon as Icon
-// TODO: Convert it to MVVM //
+
 @Composable
-fun JetTipUI(viewModel: jetTIpViewModel){
+fun JetTipUI(viewModel: JetTipViewModel){
     val totalPerPerson = viewModel.totalPerPerson
     val totalAmount = viewModel.totalAmount
     val splitNumber = viewModel.splitNumber
     val tip = viewModel.tip
     // A surface helps in automatically change the theme rather than box //
     Column(modifier = Modifier.padding(12.dp)){
-
 
         Surface(
             modifier = Modifier
@@ -194,7 +182,7 @@ fun JetTipUI(viewModel: jetTIpViewModel){
 @Preview
 @Composable
 fun JetTipUIPreview(){
-    JetTipUI(viewModel = jetTIpViewModel())
+    JetTipUI(viewModel = JetTipViewModel())
 }
 
 
